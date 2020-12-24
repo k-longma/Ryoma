@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zck.dao.UserDAO">
+
+    <insert id="addUser" parameterType="com.zck.domain.UserDO">
+        insert into ryoma.user (name, username, password)
+        value (#{name}, #{username}, #{password});
+    </insert>
+    
+    <delete id="deleteUser" parameterType="int" >
+        delete from ryoma.user
+        where id = #{userId}
+    </delete>
+    
+    <update id="updateUser" parameterType="com.zck.domain.UserDO">
+        update ryoma.user
+        set name = #{name}, username = #{username}, password = #{password}
+        where id = #{id}
+    </update>
+    
+    <select id="selectById" resultType="com.zck.domain.UserDO" >
+        select * from ryoma.user
+        where id = #{userId}
+    </select>
+
+    <select id="selectAllUser" resultType="UserDO" >
+        select * from ryoma.user
+    </select>
+
+    
+</mapper>
