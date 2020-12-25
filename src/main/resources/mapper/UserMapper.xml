@@ -3,28 +3,28 @@
 <mapper namespace="com.zck.dao.UserDAO">
 
     <insert id="addUser" parameterType="com.zck.domain.UserDO">
-        insert into ryoma.user (name, username, password)
+        insert into t_user (name, username, password)
         value (#{name}, #{username}, #{password});
     </insert>
     
     <delete id="deleteUser" parameterType="int" >
-        delete from ryoma.user
+        delete from t_user
         where id = #{userId}
     </delete>
     
     <update id="updateUser" parameterType="com.zck.domain.UserDO">
-        update ryoma.user
+        update t_user
         set name = #{name}, username = #{username}, password = #{password}
         where id = #{id}
     </update>
     
     <select id="selectById" resultType="com.zck.domain.UserDO" >
-        select * from ryoma.user
+        select * from t_user
         where id = #{userId}
     </select>
 
-    <select id="selectAllUser" resultType="UserDO" >
-        select * from ryoma.user
+    <select id="selectAllUser" resultType="com.zck.domain.UserDO" >
+        select * from t_user
     </select>
 
     
