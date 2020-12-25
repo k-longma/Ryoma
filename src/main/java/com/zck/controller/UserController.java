@@ -29,4 +29,17 @@ public class UserController {
         model.addAttribute("userList",userList);
         return "userList";
     }
+
+    @RequestMapping("/toAddUser")
+    public String toAddUser() {
+        return "addUser";
+    }
+
+    @RequestMapping("/addUser")
+    public String addUser(UserDO user) {
+        userService.addUser(user);
+        return "redirect:/user/userList";
+    }
+
+
 }

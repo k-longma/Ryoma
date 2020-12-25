@@ -18,13 +18,19 @@
         </div>
     </div>
 
+    <div class="row">
+        <div class="col-md-4 column">
+            <a class="btn btn-primary" href="${pageContext.request.contextPath}/user/toAddUser">新增</a>
+        </div>
+    </div>
+
     <div class="row clearfix">
         <div class="col-md-12 column">
             <table class="table table-hover table-striped">
                 <thead>
                     <tr>
                         <th>用户编号</th>
-                        <th>用户名称</th>
+                        <th>用户姓名</th>
                         <th>用户名</th>
                         <th>密码</th>
                     </tr>
