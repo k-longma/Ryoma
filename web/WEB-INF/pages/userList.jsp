@@ -33,6 +33,7 @@
                         <th>用户姓名</th>
                         <th>用户名</th>
                         <th>密码</th>
+                        <th>操作</th>
                     </tr>
                 </thead>
 
@@ -44,6 +45,11 @@
                             <td>${user.name}</td>
                             <td>${user.username}</td>
                             <td>${user.password}</td>
+                            <td>
+                                <a href="${pageContext.request.contextPath}/user/toUpdateUser?id=${user.id}">修改</a>
+                                &nbsp; | &nbsp;
+                                <a href="${pageContext.request.contextPath}/user/deleteUser/${user.id}">删除</a>
+                            </td>
                         </tr>
                     </c:forEach>
                 </tbody>
