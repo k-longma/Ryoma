@@ -2,6 +2,7 @@ package com.zck.controller;
 
 import com.zck.domain.UserDO;
 import com.zck.service.UserService;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
